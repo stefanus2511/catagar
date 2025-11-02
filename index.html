@@ -11,6 +11,17 @@
 
   <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- PWA -->
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#000000">
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(() => console.log('Service Worker terdaftar!'))
+      .catch(err => console.error('SW gagal:', err));
+  }
+</script>
+
 
   <style>
     :root {
